@@ -1,0 +1,26 @@
+@mixin arial($weight, $style) {
+  font-family: Arial, Helvetica, Sans-serif;
+
+  @if $weight == lighter {
+    font-weight:100;
+  }
+  @if $weight == light {
+    font-weight: 300;
+  }
+
+  @if $weight == medium {
+    font-weight: 500;
+  }
+
+  @if $weight== bold {
+    font-weight: 900;
+  }
+
+  @if $style == normal {
+    font-style: normal;
+  }
+
+  @if $style == italic {
+    font-style: italic;
+  }
+}

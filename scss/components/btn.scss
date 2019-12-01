@@ -1,0 +1,29 @@
+.btn {
+  text-transform: uppercase;
+  @include arial(bold, normal);
+  padding: 14px 28px;
+  transition: all .4s;
+
+  &_color {
+
+    &_white {
+      background-color: $blue;
+      color: $white;
+
+      &:hover {
+        color: $blue;
+        background-color: $white;
+      }
+    }
+
+    &_grey {
+      background-color: #e4e4ee;
+      color: $light-black;
+
+      &:hover {
+        color: #e4e4ee;
+        background-color: $light-black;
+      }
+    }
+  }
+}

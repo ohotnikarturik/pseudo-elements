@@ -1,0 +1,4 @@
+.paragraph p {
+  color: $grey;
+  @include arial(bold, normal)
+}

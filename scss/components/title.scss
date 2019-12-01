@@ -1,0 +1,23 @@
+.title {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.span {
+  color: $white;
+
+  &_style {
+
+    &_italic {
+      @include arial(bold, italic);
+    }
+  }
+
+  &_color {
+
+    &_grey {
+      color: $grey;
+      @include arial(medium, normal);
+    }
+  }
+}

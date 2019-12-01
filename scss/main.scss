@@ -1,0 +1,28 @@
+// basic colors
+$white: #ffffff;
+$grey: #b5b5b5;
+$blue: #4788c8;
+$light-black: #414141;
+$medium-black: #343434;
+$black: #282828;
+
+
+// config
+@import "config/mixins";
+
+// layout
+@import "layout/basic";
+@import "layout/adjustment";
+
+// sections
+@import "sections/header";
+@import "sections/content";
+@import "sections/footer";
+
+// common
+@import "components/shape-pointer";
+@import "components/title";
+@import "components/paragraph";
+@import "components/subtitle";
+@import "components/btn";
+@import "components/social-icons";

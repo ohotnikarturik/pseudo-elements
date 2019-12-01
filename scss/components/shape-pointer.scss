@@ -1,0 +1,23 @@
+.shape-pointer {
+  width: 100%;
+  background-color: $blue;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 40px solid $blue;
+    border-right: 40px solid transparent;
+    position: absolute;
+    top: 70px;
+  }
+}
+
+.shape-pointer__container {
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
