@@ -8,6 +8,8 @@
     width: 100%;
     border-bottom: 10px solid transparent;
     border-image: url('/assets/img/Border-BG.jpg') 35 round;
+    position: absolute;
+    z-index: 10;
   }
 }
 

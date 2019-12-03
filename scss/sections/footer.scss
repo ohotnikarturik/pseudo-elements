@@ -2,35 +2,132 @@
   width: 100%;
   height: 490px;
   margin-top: -490px;
-  overflow: hidden;
 }
 
-.footer__top {
-  height: 75%;
+.footer-top {
+  min-height: 75%;
   background-color: $light-black;
+  padding: 55px 0;
 }
 
-.footer__bottom {
+.footer-top__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+}
+
+.footer-top__item 
+
+.subtitle_footer {
+  margin-bottom: 20px;
+}
+
+.paragraph__top {
+  margin-bottom: 20px;
+}
+
+.inner-footer__item::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.inner-footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.inner-footer__link {
+  color: $grey;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  transition: all .5s;
+
+  &:hover {
+    color: #4788c8;;
+  }
+}
+
+.inner-footer__text {
+  padding: 10px 10px 7px;
+}
+
+.footer-bottom {
   height: 25%;
   background-color: $medium-black;
 }
 
-.container--footer__bottom {
+.container--footer-bottom {
   display: flex;
 }
 
-.footer__bottom-left, .footer__bottom-right {
+.footer-bottom__left, .footer-bottom__right {
   width: 50%;
   display: flex;
   align-items: center;
 }
 
-.footer__bottom-left {
+.footer-bottom__left {
   justify-content: flex-start;
 }
 
-.footer__bottom-right {
+.footer-bottom__right {
   justify-content: flex-end;
   padding-right: 10px;
 }
 
+.flicker__list {
+  height: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.flicker__item {
+  background-color: $black;
+}
+
+.flicker__square {
+  width: 100%;
+  height: 100%;
+  transition: all .7s;
+
+  &-1:hover {
+    // transform: scale(1.3);
+    transform: rotate(360deg);
+    background-color: salmon;
+  }
+  &-2:hover {
+    transform: rotate(360deg);
+    background-color: seagreen; 
+  }
+  &-3:hover {
+    transform: rotate(360deg);
+    background-color: darkorange;;
+  }
+  &-4:hover {
+    transform: rotate(360deg);
+    background-color: darkgray;;
+  }
+  &-5:hover {
+    transform: rotate(360deg);
+    background-color: cornflowerblue;;
+  }
+  &-6:hover {
+    transform: rotate(360deg);
+    background-color: sienna;;
+  }
+  &-7:hover {
+    transform: rotate(360deg);
+    background-color: mediumvioletred;;
+  }
+  &-8:hover {
+    transform: rotate(360deg);
+    background-color: yellow;;
+  }
+}

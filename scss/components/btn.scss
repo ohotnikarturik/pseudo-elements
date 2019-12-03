@@ -6,7 +6,7 @@
 
   &_color {
 
-    &_white {
+    &_blue {
       background-color: $blue;
       color: $white;
 
@@ -24,6 +24,15 @@
         color: #e4e4ee;
         background-color: $light-black;
       }
+    }
+  }
+
+  &_border-radius {
+    border-radius: 15px;
+
+    &:hover {
+      background-color: #4f4d4e;
+      color: $white;
     }
   }
 }

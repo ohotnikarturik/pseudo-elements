@@ -1,0 +1,292 @@
+.main {
+  background-color: $section-bg;
+}
+
+// desc-section
+.desc__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 80px;
+  margin-bottom: 110px;
+}
+
+.desc__item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120%;
+  width: 100%;
+  transform: scale(0);
+  background-color: $white;
+  transition: .7s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 0 5px $grey;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 40px solid $white;
+    border-right: 40px solid transparent;
+    position: absolute;
+    bottom: -40px;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+  }
+}
+
+.desc__item:hover .overlay {
+  transform: scale(.9);
+  box-shadow: 20px 30px 10px $grey;
+}
+
+.desc__title {
+  margin-bottom: 10px;
+}
+
+.desc__text p{
+  padding: 15px;
+  text-align: center;
+}
+
+// works-section
+.container--works{
+  margin-bottom: 150px;
+}
+
+.works__title-block {
+  @include arial(bold, normal);
+  color: #3f3f3f;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #3f3f3f;
+  font-weight: 500;
+  text-align: center;
+
+  &_width {
+    width: 20%;
+
+    &_full {
+      margin: 0 30px;
+    }
+  }
+}
+
+.border-img {
+  border-bottom: 10px solid transparent;
+  border-image: url('/assets/img/Border-BG.jpg') 35 round;
+  z-index: 10;
+
+  &_width {
+    width: 40%;
+
+    &_full {
+      width: 100%;
+    }
+  }
+}
+
+.works__list {
+  width: 100%;
+  display: flex;
+}
+
+.works__item {
+  width: 33.3%;
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+  background-color: $white;
+  box-shadow: 8px 0 5px $grey;
+  transition: all .5s ease;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 40px solid $white;
+    border-right: 40px solid transparent;
+    position: absolute;
+    bottom: -40px;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+  }
+
+  &:hover {
+    transform: rotate(-20deg);
+    box-shadow: 10px 10px 10px 10px $grey;
+    z-index: 10;
+  }
+}
+
+.works__img {
+  max-width: 100%;
+}
+
+.works__text-block {
+  padding: 15px;
+}
+
+.title-content {
+  margin-bottom: 15px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+
+// rewievs-section
+.section--reviews-dev {
+  display: flex;
+  width: 100%;
+  margin-bottom: 125px;
+}
+
+.reviews {
+  width: 65%;
+  margin-right: 20px;
+}
+
+.dev {
+  width: 35%;
+}
+
+.reviews__title-block {
+  @include arial(bold, normal);
+  color: #3f3f3f;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.reviews__list {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 110px 20px;
+}
+
+.reviews__item {
+  background-color: $white;
+  padding: 10px 15px;
+  position: relative;
+  box-shadow: 8px 0 5px $grey;
+  transition: all .5s;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 40px solid $white;
+    border-right: 40px solid transparent;
+    position: absolute;
+    bottom: -40px;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    z-index: 110;
+    box-shadow: 20px 30px 10px $grey;
+  }
+}
+
+// tabs
+
+.tabs__controls {
+  display: flex;
+  margin-top: 10px;
+}
+
+.tabs__controls-item {
+  padding: 8px 15px;
+  transition: .3s;
+  color: black;
+  box-shadow: 5px -1px 4px #b5b5b5;
+
+  &:hover , &.active {
+    background-color: $white;
+  }
+}
+
+.tabs__controls-link {
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.tabs__list {
+  background-color: $white;
+  box-shadow: 5px 0 5px $grey;
+
+  h2 {
+    padding: 10px 10px 0;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 20px 0px;
+  }
+}
+
+.tabs__item {
+  display: none;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.tabs__btn {
+  align-self: flex-end;
+}
+
+
+
+
+
+
+
+ 
+
+

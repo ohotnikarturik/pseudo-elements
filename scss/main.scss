@@ -5,10 +5,15 @@ $blue: #4788c8;
 $light-black: #414141;
 $medium-black: #343434;
 $black: #282828;
+$section-bg: #efefef;
 
+//resolutions
+$tablets: 801px;
+$phones: 480px;
 
 // config
 @import "config/mixins";
+@import "config/media";
 
 // layout
 @import "layout/basic";
@@ -19,10 +24,11 @@ $black: #282828;
 @import "sections/content";
 @import "sections/footer";
 
-// common
+// components
 @import "components/shape-pointer";
 @import "components/title";
 @import "components/paragraph";
 @import "components/subtitle";
 @import "components/btn";
-@import "components/social-icons";
+@import "components/icons";
+@import "components/desc__title";

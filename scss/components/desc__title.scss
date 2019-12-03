@@ -1,0 +1,9 @@
+.desc__title {
+  text-transform: uppercase;
+  @include arial(bold, normal);
+  color: #4f4d4e;
+}
+
+.desc__title-span {
+  @include arial(medium, normal);
+}

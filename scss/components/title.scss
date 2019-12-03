@@ -5,11 +5,16 @@
 
 .span {
   color: $white;
+  text-transform: uppercase;
 
   &_style {
 
     &_italic {
       @include arial(bold, italic);
+    }
+
+    &_bold {
+      @include arial(bold, normal);
     }
   }
 
@@ -21,3 +26,4 @@
     }
   }
 }
+
