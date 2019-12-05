@@ -7,8 +7,13 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding-top: 80px;
-  margin-bottom: 110px;
+  padding-top: rem(80px);
+  margin-bottom: rem(110px);
+
+  @include tablets() {
+    flex-wrap: wrap;
+    padding-top: rem(20px);
+  }
 }
 
 .desc__item {
@@ -16,9 +21,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: rem(10px);
   position: relative;
   cursor: pointer;
+
+  @include tablets() {
+   width: 50%;
+   margin-top: rem(50px);
+  }
+
+  @include phones() {
+   width: 85%;
+   margin-top: rem(50px);
+  }
 }
 
 
@@ -37,16 +52,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 5px 0 5px $grey;
+  box-shadow: rem(5px) 0 rem(5px) $grey;
 
   &:after {
     content: '';
     width: 0;
     height: 0;
-    border-top: 40px solid $white;
-    border-right: 40px solid transparent;
+    border-top: rem(40px) solid $white;
+    border-right: rem(40px) solid transparent;
     position: absolute;
-    bottom: -40px;
+    bottom: rem(-40px);
     position: absolute;
     z-index: 100;
     left: 0;
@@ -55,35 +70,40 @@
 
 .desc__item:hover .overlay {
   transform: scale(.9);
-  box-shadow: 20px 30px 10px $grey;
+  box-shadow: rem(20px) rem(30px) rem(10px) $grey;
+
+  @include tablets() {
+    transform: scale(0);
+  }
 }
 
 .desc__title {
-  margin-bottom: 10px;
+  min-height: rem(50px);
+  text-align: center;
 }
 
 .desc__text p{
-  padding: 15px;
+  padding: rem(15px);
   text-align: center;
 }
 
 // works-section
 .container--works{
-  margin-bottom: 150px;
+  margin-bottom: rem(150px);
 }
 
 .works__title-block {
   @include arial(bold, normal);
   color: #3f3f3f;
-  font-size: 24px;
+  font-size: rem(24px);
   display: flex;
   align-items: center;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: rem(24px);
   color: #3f3f3f;
   font-weight: 500;
   text-align: center;
@@ -92,13 +112,13 @@
     width: 20%;
 
     &_full {
-      margin: 0 30px;
+      margin: 0 rem(30px);
     }
   }
 }
 
 .border-img {
-  border-bottom: 10px solid transparent;
+  border-bottom: rem(10px) solid transparent;
   border-image: url('/assets/img/Border-BG.jpg') 35 round;
   z-index: 10;
 
@@ -114,16 +134,35 @@
 .works__list {
   width: 100%;
   display: flex;
+  margin-bottom: rem(100px);
+
+  @include tablets() {
+    flex-wrap: wrap;
+    margin-bottom: rem(50px);
+  }
 }
 
 .works__item {
   width: 33.3%;
-  margin-right: 15px;
+  margin-right: rem(15px);
   cursor: pointer;
   position: relative;
   background-color: $white;
-  box-shadow: 8px 0 5px $grey;
+  box-shadow: rem(8px) 0 rem(5px) $grey;
   transition: all .5s ease;
+
+  @include tablets() {
+    width: 100%;
+    display: flex;
+    margin-right: 0;
+    margin-bottom: rem(80px);
+    padding: rem(20px);
+  }
+
+  @include phones() {
+    width: 100%;
+    display: block;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -133,61 +172,108 @@
     content: '';
     width: 0;
     height: 0;
-    border-top: 40px solid $white;
-    border-right: 40px solid transparent;
+    border-top: rem(40px) solid $white;
+    border-right: rem(40px) solid transparent;
     position: absolute;
-    bottom: -40px;
+    bottom: rem(-40px);
     position: absolute;
     z-index: 100;
     left: 0;
+
+    @include tablets() {
+      border-top: rem(50px) solid $white;
+      border-right: rem(50px) solid transparent;
+      bottom: rem(-50px);
+    }
   }
 
   &:hover {
     transform: rotate(-20deg);
-    box-shadow: 10px 10px 10px 10px $grey;
+    box-shadow: rem(10px) rem(10px) rem(10px) rem(10px) $grey;
     z-index: 10;
+
+    @include tablets() {
+      transform: rotate(0deg);
+    }
   }
 }
 
 .works__img {
   max-width: 100%;
+
+  @include tablets() {
+    width: 50%;
+  }
+
+  @include phones() {
+    width: 100%;
+  }
 }
 
 .works__text-block {
-  padding: 15px;
+  padding: rem(15px);
+  overflow: hidden;
+
+  @include tablets() {
+    padding-top: 0;
+  }
 }
 
 .title-content {
-  margin-bottom: 15px;
-  margin-left: 10px;
-  font-size: 20px;
+  margin-bottom: rem(15px);
+  margin-left: rem(10px);
+  font-size: rem(20px);
   color: black;
   font-weight: 700;
+
+  @include phones() {
+    text-align: center;
+  }
 }
 
 // rewievs-section
 .section--reviews-dev {
   display: flex;
   width: 100%;
-  margin-bottom: 125px;
+  margin-bottom: rem(90px);
+
+  @include tablets() {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reviews {
   width: 65%;
-  margin-right: 20px;
+  margin-right: rem(20px);
+
+  @include tablets() {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: rem(100px);
+  }
+
 }
 
 .dev {
   width: 35%;
+
+  @include tablets() {
+    width: 100%;
+  }
 }
 
 .reviews__title-block {
   @include arial(bold, normal);
   color: #3f3f3f;
-  font-size: 24px;
+  font-size: rem(24px);
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
+
+  @include tablets() {
+    margin-bottom: rem(80px);
+  }
 }
 
 .reviews__list {
@@ -197,14 +283,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 110px 20px;
+  grid-gap: rem(70px) rem(20px);
+
+
+  @include phones() {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: rem(80px);;
+  }
 }
 
 .reviews__item {
   background-color: $white;
-  padding: 10px 15px;
+  padding: rem(10px) rem(15px);
   position: relative;
-  box-shadow: 8px 0 5px $grey;
+  box-shadow: rem(8px) 0 rem(5px) $grey;
   transition: all .5s;
   cursor: pointer;
 
@@ -212,10 +305,10 @@
     content: '';
     width: 0;
     height: 0;
-    border-top: 40px solid $white;
-    border-right: 40px solid transparent;
+    border-top: rem(40px) solid $white;
+    border-right: rem(40px) solid transparent;
     position: absolute;
-    bottom: -40px;
+    bottom: rem(-40px);
     position: absolute;
     z-index: 100;
     left: 0;
@@ -224,7 +317,11 @@
   &:hover {
     transform: scale(1.2);
     z-index: 110;
-    box-shadow: 20px 30px 10px $grey;
+    box-shadow: rem(20px) rem(30px) rem(10px) $grey;
+
+    @include tablets() {
+      transform: scale(1);
+    }
   }
 }
 
@@ -232,14 +329,14 @@
 
 .tabs__controls {
   display: flex;
-  margin-top: 10px;
+  margin-top: rem(10px);
 }
 
 .tabs__controls-item {
-  padding: 8px 15px;
+  padding: rem(8px) rem(15px);
   transition: .3s;
   color: black;
-  box-shadow: 5px -1px 4px #b5b5b5;
+  box-shadow: rem(5px) rem(-1px) rem(4px) #b5b5b5;
 
   &:hover , &.active {
     background-color: $white;
@@ -250,20 +347,20 @@
   text-transform: uppercase;
   color: black;
   font-weight: 700;
-  font-size: 20px;
+  font-size: rem(20px);
 }
 
 .tabs__list {
   background-color: $white;
-  box-shadow: 5px 0 5px $grey;
+  box-shadow: rem(5px) 0 rem(5px) $grey;
 
   h2 {
-    padding: 10px 10px 0;
+    padding: rem(10px) rem(10px) 0;
     font-weight: bold;
   }
 
   p {
-    padding: 20px 0px;
+    padding: rem(20px) rem(0px);
   }
 }
 
@@ -273,13 +370,15 @@
   &.active {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: rem(20px);
   }
 }
 
 .tabs__btn {
   align-self: flex-end;
 }
+
+
 
 
 

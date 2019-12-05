@@ -1,13 +1,15 @@
 .wrapper {
   min-height: 100%;
+  width: 100%;
 }
 
 .empty {
-  height: 490px;
+  height: rem(490px);
 }
 
 .container {
-  max-width: 1350px;
+  max-width: rem(1350px);
+  width: 95%;
   margin: 0 auto;
   height: 100%;
 }

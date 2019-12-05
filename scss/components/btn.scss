@@ -1,7 +1,7 @@
 .btn {
   text-transform: uppercase;
   @include arial(bold, normal);
-  padding: 14px 28px;
+  padding: rem(14px) rem(28px);
   transition: all .4s;
 
   &_color {
@@ -28,7 +28,7 @@
   }
 
   &_border-radius {
-    border-radius: 15px;
+    border-radius: rem(15px);
 
     &:hover {
       background-color: #4f4d4e;

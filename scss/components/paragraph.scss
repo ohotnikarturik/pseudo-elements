@@ -1,4 +1,15 @@
-.paragraph p {
+.paragraph {
   color: $grey;
-  @include arial(bold, normal)
+  @include arial(bold, normal);
+
+  &_padding {
+    &_more {
+      margin-bottom: rem(40px);
+    }
+  }
+
+  @include tablets() {
+    // margin-bottom: rem(30px);
+    text-align: center;
+  }
 }

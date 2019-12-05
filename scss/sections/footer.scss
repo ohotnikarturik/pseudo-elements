@@ -1,37 +1,55 @@
 .footer {
   width: 100%;
-  height: 490px;
-  margin-top: -490px;
+  height: rem(490px);
+  margin-top: rem(-490px);
 }
 
 .footer-top {
   min-height: 75%;
   background-color: $light-black;
-  padding: 55px 0;
+  padding: rem(55px) 0;
 }
 
 .footer-top__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 20px;
+  grid-column-gap: rem(20px);
+
+  @include tablets() {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    grid-gap: rem(40px) rem(30px);
+  }
+
+  @include phones() {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: rem(20px);
+  }
 }
 
-.footer-top__item 
-
 .subtitle_footer {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
+
+  @include tablets() {
+    margin-bottom: rem(10px);
+  }
 }
 
 .paragraph__top {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
+
+  @include tablets() {
+    margin-bottom: rem(5px);
+  }
 }
 
 .inner-footer__item::after {
   content: '';
   display: block;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: rem(1px) solid black;
 }
 
 .inner-footer__list {
@@ -42,7 +60,7 @@
 
 .inner-footer__link {
   color: $grey;
-  font-size: 20px;
+  font-size: rem(20px);
   font-family: 'Times New Roman', Times, serif;
   transition: all .5s;
 
@@ -52,7 +70,11 @@
 }
 
 .inner-footer__text {
-  padding: 10px 10px 7px;
+  padding: rem(10px) rem(10px) rem(7px);
+
+  @include tablets() {
+    padding: rem(5px) rem(5px) rem(3px);
+  }
 }
 
 .footer-bottom {
@@ -62,6 +84,13 @@
 
 .container--footer-bottom {
   display: flex;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer-bottom__left, .footer-bottom__right {
@@ -76,7 +105,7 @@
 
 .footer-bottom__right {
   justify-content: flex-end;
-  padding-right: 10px;
+  padding-right: rem(10px);
 }
 
 .flicker__list {
@@ -85,7 +114,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: rem(5px);
+
+  @include tablets() {
+    height: 70%;
+  }
 }
 
 .flicker__item {
